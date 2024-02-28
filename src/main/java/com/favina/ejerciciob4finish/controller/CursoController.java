@@ -47,6 +47,11 @@ public class CursoController {
         return cursoService.getCursosFiltered(palabra);
     }
     
+    @GetMapping("/cursos/search/{palabra}")
+    public List<Curso> searchCursosByFiltro(@PathVariable String palabra){
+        return cursoService.getCursosFiltered(palabra);
+    }
+    
     @PutMapping("/cursos/edit")
     public String editCurso(@RequestBody Curso c){
         cursoService.editCurso(c);

@@ -61,6 +61,11 @@ public class CursoService implements ICursoService {
         
         return filtrados;
     }
+
+    @Override
+    public List<Curso> searchCursosFiltered(String palabra) {
+        return cursoRepository.findByNombreContaining(palabra);
+    }
     
     
 }
