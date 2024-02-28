@@ -19,5 +19,7 @@ public interface ICursoService {
     public CursoTemaDTO temasPorCurso(Long id_curso);
     
     public List<Curso> getCursosFiltered(String palabra);
+    
+    public List<Curso> searchCursosFiltered(String palabra);
 
 }
